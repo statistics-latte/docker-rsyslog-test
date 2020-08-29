@@ -3,7 +3,7 @@ RUN yes | unminimize
 
 ENV TZ=Asia/Tokyo
 
-# ユーザーを作成
+# Create ordinary user
 ARG DOCKER_UID=1000
 ARG DOCKER_USER=docker
 ARG DOCKER_PASSWORD=docker
