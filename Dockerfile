@@ -15,8 +15,8 @@ RUN useradd -m --uid ${DOCKER_UID} --groups sudo ${DOCKER_USER} \
 #   rsyslogd: activation of module imklog failed [v8.32.0 try http://www.rsyslog.com/e/2145 ]
 #
 # sed (stream editor) options:
-#  -i (--in-place):
-#  -e script (--expression=script):
+#  -i (--in-place)
+#  -e script (--expression=script)
 RUN sed -i -e '/^module(load=\"imklog\"/s/^/# /' /etc/rsyslog.conf
 
 COPY rsyslog-test.conf /etc/rsyslog.d/
